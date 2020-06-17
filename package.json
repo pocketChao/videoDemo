@@ -27,7 +27,6 @@
     "vuex": "^3.4.0",
     "xgplayer": "^2.9.3",
     "xgplayer-flv": "^2.3.9",
-    "xgplayer-hls": "^2.3.9",
     "xgplayer-hls.js": "^2.2.3",
     "xgplayer-mp4": "^1.1.8"
   },

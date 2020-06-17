@@ -9593,7 +9593,7 @@ websocket-driver@>=0.5.1:
     websocket-extensions ">=0.1.1"
 
 websocket-extensions@>=0.1.1:
-  version "0.1.4"
+  version "0.1.3"
   resolved "https://registry.npm.taobao.org/websocket-extensions/download/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
   integrity sha1-XS/yKXcAPsaHpLhwc9+7rBRszyk=
 
@@ -9720,46 +9720,6 @@ xgplayer-flv@^2.3.9:
     xgplayer-flv-live "^2.3.9"
     xgplayer-flv-vod "^2.3.9"
 
-xgplayer-hls-live@^2.3.9:
-  version "2.3.9"
-  resolved "https://registry.yarnpkg.com/xgplayer-hls-live/-/xgplayer-hls-live-2.3.9.tgz#ff942124689e384efabae81a2191d1bc6c1098f6"
-  integrity sha512-rCY8DRr2UaThZIAgTocmt0I7xJw3n4gYIg/R3lBhhje0tSjdGKtRUZKNI/T3LnXY1qNeJStvkioifY3yzrHBsA==
-  dependencies:
-    xgplayer-transmuxer-buffer-playlist "^2.3.9"
-    xgplayer-transmuxer-buffer-presource "^2.3.9"
-    xgplayer-transmuxer-buffer-track "^2.3.9"
-    xgplayer-transmuxer-buffer-xgbuffer "^2.3.9"
-    xgplayer-transmuxer-codec-compatibility "^2.3.9"
-    xgplayer-transmuxer-constant-events "^2.3.9"
-    xgplayer-transmuxer-context "^2.3.9"
-    xgplayer-transmuxer-demux-m3u8 "^2.3.9"
-    xgplayer-transmuxer-demux-ts "^2.3.9"
-    xgplayer-transmuxer-loader-fetch "^2.3.9"
-    xgplayer-transmuxer-remux-mp4 "^2.3.9"
-    xgplayer-utils "^2.3.9"
-    xgplayer-utils-crypto "^2.3.9"
-    xgplayer-utils-mse "^2.3.9"
-
-xgplayer-hls-vod@^2.3.9:
-  version "2.3.9"
-  resolved "https://registry.yarnpkg.com/xgplayer-hls-vod/-/xgplayer-hls-vod-2.3.9.tgz#0056f0b0b64022bde7c705bcb7a8c5c1ef01da85"
-  integrity sha512-aRF9rq8NOGuY/3NeHnWiYPs2MVLeFBvDq/LUE9Yd5aF8YqHTxoXxWiEkO7jVjPHAU1K7fn1rM93aQffxGL+NLg==
-  dependencies:
-    xgplayer-transmuxer-buffer-playlist "^2.3.9"
-    xgplayer-transmuxer-buffer-presource "^2.3.9"
-    xgplayer-transmuxer-buffer-track "^2.3.9"
-    xgplayer-transmuxer-buffer-xgbuffer "^2.3.9"
-    xgplayer-transmuxer-codec-compatibility "^2.3.9"
-    xgplayer-transmuxer-constant-events "^2.3.9"
-    xgplayer-transmuxer-context "^2.3.9"
-    xgplayer-transmuxer-demux-m3u8 "^2.3.9"
-    xgplayer-transmuxer-demux-ts "^2.3.9"
-    xgplayer-transmuxer-loader-fetch "^2.3.9"
-    xgplayer-transmuxer-remux-mp4 "^2.3.9"
-    xgplayer-utils "^2.3.9"
-    xgplayer-utils-crypto "^2.3.9"
-    xgplayer-utils-mse "^2.3.9"
-
 xgplayer-hls.js@^2.2.3:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/xgplayer-hls.js/-/xgplayer-hls.js-2.2.3.tgz#bf538911145346c447528d609fc95dd267a24d81"
@@ -9767,14 +9727,6 @@ xgplayer-hls.js@^2.2.3:
   dependencies:
     deepmerge "2.0.1"
     event-emitter "^0.3.5"
-
-xgplayer-hls@^2.3.9:
-  version "2.3.9"
-  resolved "https://registry.yarnpkg.com/xgplayer-hls/-/xgplayer-hls-2.3.9.tgz#86e02c536b33f26c943d860a69315f74fa9e9369"
-  integrity sha512-C3hywN+C66JAY2pBN/bo2biXbUwtkoYuj5BpjAbD9HTh46PraQmqyDi6ozVtE9kUFtThh7ARsaNp4xk50Mh1VA==
-  dependencies:
-    xgplayer-hls-live "^2.3.9"
-    xgplayer-hls-vod "^2.3.9"
 
 xgplayer-mobilevideo@^2.3.9:
   version "2.3.9"
@@ -9792,11 +9744,6 @@ xgplayer-mp4@^1.1.8:
     concat-typed-array "^1.0.2"
     deepmerge "^2.0.1"
     event-emitter "^0.3.5"
-
-xgplayer-transmuxer-buffer-playlist@^2.3.9:
-  version "2.3.9"
-  resolved "https://registry.yarnpkg.com/xgplayer-transmuxer-buffer-playlist/-/xgplayer-transmuxer-buffer-playlist-2.3.9.tgz#6cfba8ef8d9247e4adffc5d68b8e400d81e11732"
-  integrity sha512-96INQEoNLrJM2ebgyHJ3d+/B+mpJM9vKhoUnyUTqCYcIQTYsO46J4cyASp0oJXIvPkXtsExHZZizia0qQUlokA==
 
 xgplayer-transmuxer-buffer-presource@^2.3.9:
   version "2.3.9"
@@ -9871,24 +9818,6 @@ xgplayer-transmuxer-demux-flv@^2.3.9:
     xgplayer-utils-sniffer "^2.3.9"
     xgplayer-utils-utf8 "^2.3.9"
 
-xgplayer-transmuxer-demux-m3u8@^2.3.9:
-  version "2.3.9"
-  resolved "https://registry.yarnpkg.com/xgplayer-transmuxer-demux-m3u8/-/xgplayer-transmuxer-demux-m3u8-2.3.9.tgz#d45898ba80a1cdba58bef1528baf1fcc3a2e87e7"
-  integrity sha512-++UwzVtNtFyzVRPGZIqepYXG36Xj3SQtHjMpY9FKqPWQB04vQ+Eox2NOkTgd54kq6DZ5RIYt/vV7wZgGfC/M9Q==
-
-xgplayer-transmuxer-demux-ts@^2.3.9:
-  version "2.3.9"
-  resolved "https://registry.yarnpkg.com/xgplayer-transmuxer-demux-ts/-/xgplayer-transmuxer-demux-ts-2.3.9.tgz#444aabfeaaebfba400d7f5495c653a21b1d6a1cc"
-  integrity sha512-9iYeXvuWDBZ0csg0ogoeBo2qtzwV6cgi9ovevFmyOstTzdDy7IGazWP8HcGvwSjgg4ErZJ5nzP6g5r01Mc/DEQ==
-  dependencies:
-    xgplayer-transmuxer-buffer-stream "^2.3.9"
-    xgplayer-transmuxer-buffer-track "^2.3.9"
-    xgplayer-transmuxer-codec-avc "^2.3.9"
-    xgplayer-transmuxer-codec-hevc "^2.3.9"
-    xgplayer-transmuxer-constant-events "^2.3.9"
-    xgplayer-transmuxer-model-trackmeta "^2.3.9"
-    xgplayer-transmuxer-model-tracksample "^2.3.9"
-
 xgplayer-transmuxer-loader-fetch@^2.3.9:
   version "2.3.9"
   resolved "https://registry.yarnpkg.com/xgplayer-transmuxer-loader-fetch/-/xgplayer-transmuxer-loader-fetch-2.3.9.tgz#75008f322b4d1971c2b94e25451adeae62de03d9"
@@ -9911,11 +9840,6 @@ xgplayer-transmuxer-model-trackmeta@^2.3.9:
   resolved "https://registry.yarnpkg.com/xgplayer-transmuxer-model-trackmeta/-/xgplayer-transmuxer-model-trackmeta-2.3.9.tgz#bc73452a3e0438c5ad355cc2b65a5498599b2683"
   integrity sha512-/7relnkO7W69kpYcCdNqbwCsSoZLzQ3mt/3Sjgz6Pis01zPfW8hGbcpLbPJpjM7iypakan7xOKbtz5d20m67fw==
 
-xgplayer-transmuxer-model-tracksample@^2.3.9:
-  version "2.3.9"
-  resolved "https://registry.yarnpkg.com/xgplayer-transmuxer-model-tracksample/-/xgplayer-transmuxer-model-tracksample-2.3.9.tgz#099691bdf2ee848c57811426b8ac85a1396ed465"
-  integrity sha512-wMXcKnnFUEKBHuF6jID2UlkGPqHUKGB80er7CmMD4IKXeWrT68KlNx8OzEpdHKQ814mU5FAswOediv8Svnaeog==
-
 xgplayer-transmuxer-remux-mp4@^2.3.9:
   version "2.3.9"
   resolved "https://registry.yarnpkg.com/xgplayer-transmuxer-remux-mp4/-/xgplayer-transmuxer-remux-mp4-2.3.9.tgz#f58422821c0fe9c22fb4fabb4bac0cf3acf30daa"
@@ -9926,13 +9850,6 @@ xgplayer-transmuxer-remux-mp4@^2.3.9:
     xgplayer-transmuxer-model-mediasegmentlist "^2.3.9"
     xgplayer-utils "^2.3.9"
     xgplayer-utils-sniffer "^2.3.9"
-
-xgplayer-utils-crypto@^2.3.9:
-  version "2.3.9"
-  resolved "https://registry.yarnpkg.com/xgplayer-utils-crypto/-/xgplayer-utils-crypto-2.3.9.tgz#e26586bc924983f0166ddea00ff75e17713db4ae"
-  integrity sha512-6nkPsg17MO6KW0cllmnRp7g2GXhWwBeKds7yCucoo//k4gDAe0gTE2ilupNMTd5h18QutDFq2ugu2UQ3xkcJ0A==
-  dependencies:
-    xgplayer-transmuxer-constant-events "^2.3.9"
 
 xgplayer-utils-mse@^2.3.9:
   version "2.3.9"

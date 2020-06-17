@@ -39,7 +39,7 @@ export default {
           txt: "这是一条弹幕", //弹幕文字内容
           style: {
             //弹幕自定义样式
-            color: "#ff9500",
+            color: "#198CFF",
             fontSize: "20px",
             border: "solid 1px #ff9500",
             borderRadius: "50px",
@@ -64,7 +64,8 @@ export default {
       playsinline: true,
       // danmu: bulletScreen,
       autoplay: false,
-      muted: true,
+      // 静音
+      // muted: true,
       width: 375,
       height: 211,
       // 设置跟随父容器（#player 的宽度调整  高度随上面设置的宽高的比例走）
@@ -184,6 +185,18 @@ export default {
   background: black;
 }
 /deep/ .xgplayer-progress-played {
-  background: dodgerblue;
+  background: #198cff;
+}
+/deep/ .xgplayer-enter-spinner {
+  width: 40px !important;
+  height: 40px !important;
+}
+/*/deep/ .xgplayer-icon-play {*/
+/*  width: 60px !important;*/
+/*  !*height: 60px !important;*!*/
+/*}*/
+/deep/ .xgplayer-start {
+  width: 100px !important;
+  height: 100px !important;
 }
 </style>
