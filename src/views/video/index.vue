@@ -39,16 +39,25 @@ export default {
       player: null,
       isLandscape: false,
       inputVideoUrl: "",
-      videoUrl:
-        "http://saas.g3.chinaedu.net:13691/sfs/mizarsaas/mizar_test/resource/m3u8/20200508/ca872a23-88c2-4e70-980a-5008944b1d22/ca872a23-88c2-4e70-980a-5008944b1d22.m3u8"
+      videoData: {
+        localMp4Url: require("@/assets/videos/vertical-test.mp4"),
+        mp4Url:
+          "http://s2.pstatp.com/cdn/expire-1-M/byted-player-videos/1.0.0/xgplayer-demo.mp4",
+        m3u8Url:
+          "http://saas.g3.chinaedu.net:13691/sfs/mizarsaas/mizar_test/resource/m3u8/20200508/ca872a23-88c2-4e70-980a-5008944b1d22/ca872a23-88c2-4e70-980a-5008944b1d22.m3u8"
+      },
+      videoUrl: ""
     };
+  },
+  created() {
+    this.videoUrl = this.videoData.m3u8Url;
   },
   methods: {
     switchVideoUrl() {
       if (!this.inputVideoUrl.trim()) {
         return;
       }
-      this.videoUrl = require("@/assets/videos/vertical-test.mp4");
+      this.videoUrl = this.videoData.localMp4Url;
     },
     ready() {
       console.log("==========");

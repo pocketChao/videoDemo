@@ -3,9 +3,10 @@
 </template>
 
 <script>
-import { reactive, watch, onMounted } from "@vue/composition-api";
+import { reactive, watch, computed, onMounted } from "@vue/composition-api";
 import Player from "xgplayer";
 import HlsJsPlayer from "xgplayer-hls.js";
+import FlvPlayer from "xgplayer-flv";
 export default {
   props: {
     videoUrl: {
@@ -21,47 +22,103 @@ export default {
     console.log(props);
     console.log(attrs);
     let player = reactive({});
-    const videoData = reactive({
-      isLandscape: false,
-      localMp4Url: require("@/assets/videos/vertical-test.mp4"),
-      mp4Url:
-        "http://s2.pstatp.com/cdn/expire-1-M/byted-player-videos/1.0.0/xgplayer-demo.mp4",
-      m3u8Url:
-        "http://saas.g3.chinaedu.net:13691/sfs/mizarsaas/mizar_test/resource/m3u8/20200508/ca872a23-88c2-4e70-980a-5008944b1d22/ca872a23-88c2-4e70-980a-5008944b1d22.m3u8"
+    const videoType = computed(() => {
+      const videoUrl = props.videoUrl;
+      console.log(videoUrl);
+      return videoUrl.substring(videoUrl.lastIndexOf(".") + 1);
     });
+    const bulletScreen = reactive({
+      comments: [
+        //弹幕数组
+        {
+          duration: 15000, //弹幕持续显示时间,毫秒(最低为5000毫秒)
+          id: "1", //弹幕id，需唯一
+          start: 3000, //弹幕出现时间，毫秒
+          prior: true, //该条弹幕优先显示，默认false
+          color: true, //该条弹幕为彩色弹幕，默认false
+          txt: "这是一条弹幕", //弹幕文字内容
+          style: {
+            //弹幕自定义样式
+            color: "#ff9500",
+            fontSize: "20px",
+            border: "solid 1px #ff9500",
+            borderRadius: "50px",
+            padding: "5px 11px",
+            backgroundColor: "rgba(255, 255, 255, 0.1)"
+          },
+          mode: "scroll" //显示模式，top顶部居中，bottom底部居中，scroll滚动，默认为scroll
+          // el: DOM //直接传入一个自定义的DOM元素作为弹幕，使用该项的话会忽略所提供的txt和style
+        }
+      ],
+      area: {
+        //弹幕显示区域
+        start: 0, //区域顶部到播放器顶部所占播放器高度的比例
+        end: 1 //区域底部到播放器顶部所占播放器高度的比例
+      },
+      closeDefaultBtn: false, //开启此项后不使用默认提供的弹幕开关，默认使用西瓜播放器提供的开关
+      defaultOff: false //开启此项后弹幕不会初始化，默认初始化弹幕
+    });
+    const videoOptions = reactive({
+      id: "player",
+      url: props.videoUrl,
+      playsinline: true,
+      // danmu: bulletScreen,
+      autoplay: false,
+      muted: true,
+      width: 375,
+      height: 211,
+      // 设置跟随父容器（#player 的宽度调整  高度随上面设置的宽高的比例走）
+      fluid: true,
+      poster: "https://img.yzcdn.cn/vant/cat.jpeg",
+      // 样式全屏功能不会隐藏当前浏览器的标签栏，导航栏，只是在当前页面内部全屏显示。
+      // cssFullscreen: true,
+      rotate: false,
+      // 禁止拖拽
+      disableProgress: false,
+      allowPlayAfterEnded: true,
+      allowSeekAfterEnded: true,
+      // 关闭双击全屏
+      closeVideoDblclick: false,
+      // progressDot: [{ time: 10 }, { time: 22 }],
+      // 控制条配置 *只对原生video有效，对自定义UI请使用ignores选项
+      // controlsList: [],
+      ignores: ["replay"],
+      // 微信 X5 同层播放（video上面可以放置html元素）
+      "x5-video-player-type": "h5",
+      // 微信 X5 全屏播放
+      "x5-video-player-fullscreen": true
+    });
+
     watch(
       () => {
         return [props.videoUrl, props.someProject];
       },
       (val, oldVal) => {
-        console.log(val);
-        console.log(oldVal);
+        if (!oldVal) {
+          return;
+        }
         if (val[0] !== oldVal[0]) {
+          console.log(player);
           player.start(val[0]);
         }
       }
     );
     onMounted(() => {
-      player = new Player({
-        id: "player",
-        url: videoData.mp4Url,
-        playsinline: true,
-        autoplay: false,
-        muted: true,
-        // 设置跟随父容器（#player 的宽度调整）
-        fluid: true,
-        poster: "https://img.yzcdn.cn/vant/cat.jpeg",
-        cssFullscreen: false,
-        rotate: false,
-        // 禁止拖拽
-        disableProgress: false,
-        // 控制条配置 *只对原生video有效，对自定义UI请使用ignores选项
-        controlsList: [],
-        // 微信 X5 同层播放（video上面可以放置html元素）
-        "x5-video-player-type": "h5",
-        // 微信 X5 全屏播放
-        "x5-video-player-fullscreen": true
-      });
+      console.log(videoType.value);
+      switch (videoType.value.toLowerCase()) {
+        case "mp4":
+          player = new Player(videoOptions);
+          break;
+        case "m3u8":
+          player = new HlsJsPlayer(videoOptions);
+          break;
+        case "flv":
+          player = new FlvPlayer(videoOptions);
+          break;
+        default:
+          console.log("不支持该视频格式");
+          break;
+      }
       player.on("ready", () => {
         console.log("ready");
         emit("ready");
@@ -102,7 +159,7 @@ export default {
       player.on("requestCssFullscreen", function() {
         console.log(this);
         console.log("进入css样式全屏");
-        this.rotate(true, true, 1);
+        // this.rotate(true, true, 1);
       });
       player.on("exitCssFullscreen", () => {
         console.log("退出css样式全屏");
@@ -111,8 +168,11 @@ export default {
         console.log("错误");
         console.log(err);
       });
+      player.on("end", function() {
+        console.log("结束");
+      });
     });
-    return { player, videoData, onMounted };
+    return { player, videoType, bulletScreen, videoOptions, onMounted };
   }
 };
 </script>
@@ -120,8 +180,10 @@ export default {
 <style lang="scss" scoped>
 #player {
   width: 100%;
-  height: 100%;
   box-sizing: border-box !important;
   background: black;
+}
+/deep/ .xgplayer-progress-played {
+  background: dodgerblue;
 }
 </style>
