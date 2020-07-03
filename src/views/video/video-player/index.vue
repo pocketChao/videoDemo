@@ -99,8 +99,9 @@ export default {
           return;
         }
         if (val[0] !== oldVal[0]) {
-          console.log(player);
-          player.start(val[0]);
+          player.src = val[0];
+          player.play();
+          player.currentTime = 2;
         }
       }
     );
@@ -188,15 +189,13 @@ export default {
   background: #198cff;
 }
 /deep/ .xgplayer-enter-spinner {
-  width: 40px !important;
-  height: 40px !important;
+  width: 50px !important;
+  height: 50px !important;
 }
-/*/deep/ .xgplayer-icon-play {*/
-/*  width: 60px !important;*/
-/*  !*height: 60px !important;*!*/
-/*}*/
 /deep/ .xgplayer-start {
-  width: 100px !important;
-  height: 100px !important;
+  width: 90px !important;
+  height: 90px !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0;
 }
 </style>

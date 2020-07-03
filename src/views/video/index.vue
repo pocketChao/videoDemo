@@ -44,7 +44,7 @@ export default {
         mp4Url:
           "http://s2.pstatp.com/cdn/expire-1-M/byted-player-videos/1.0.0/xgplayer-demo.mp4",
         m3u8Url:
-          "http://saas.g3.chinaedu.net:13691/sfs/mizarsaas/mizar_test/resource/m3u8/20200508/ca872a23-88c2-4e70-980a-5008944b1d22/ca872a23-88c2-4e70-980a-5008944b1d22.m3u8"
+          "http://saas.g3.chinaedu.net:13691/sfs/lms3/uploadfile//30003//20200422/2a990dfd-297f-493d-b1a2-634e4b10cca3.mp4"
       },
       videoUrl: ""
     };
