@@ -50,7 +50,7 @@ export default {
     };
   },
   created() {
-    this.videoUrl = this.videoData.m3u8Url;
+    this.videoUrl = this.videoData.mp4Url;
   },
   methods: {
     switchVideoUrl() {
