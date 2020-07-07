@@ -16,7 +16,7 @@
         color="linear-gradient(to right, #4bb0ff, #6149f6)"
         @click="showObject.showSec = !showObject.showSec"
       >
-        不同的进入和离开动画
+        不同的进入和离开效果
       </lc-button>
       <transition name="slide-fade">
         <p v-if="showObject.showSec">弘成教育</p>
@@ -48,11 +48,30 @@
         <p v-if="showObject.showFourth">弘成教育</p>
       </transition>
     </div>
+    <div class="item">
+      <lc-button
+        color="linear-gradient(to right, #4bb0ff, #6149f6)"
+        @click="showObject.showFifth = !showObject.showFifth"
+      >
+        JavaScript
+      </lc-button>
+      <transition
+        @before-enter="beforeEnter"
+        @enter="enter"
+        @leave="leave"
+        v-bind:css="false"
+      >
+        <p v-if="showObject.showFifth">
+          弘成教育
+        </p>
+      </transition>
+    </div>
   </div>
 </template>
 
 <script>
 import { ref, reactive } from "@vue/composition-api";
+import Velocity from "velocity-animate";
 import { Button } from "vant";
 
 export default {
@@ -65,9 +84,36 @@ export default {
       show: false,
       showSec: false,
       showThird: false,
-      showFourth: false
+      showFourth: false,
+      showFifth: false
     });
-    return { show, showObject };
+    function beforeEnter(el) {
+      el.style.opacity = 0;
+      el.style.transformOrigin = "left";
+    }
+    function enter(el, done) {
+      // 第一个参数：表示要执行动画的元素
+      // 第二个参数：表示要执行动画的样式属性
+      // 第三个参数：表示动画执行的时间长度
+      // 第四个参数：表示动画执行完成的回调函数
+      Velocity(el, { opacity: 1, fontSize: "1.4em" }, { duration: 300 });
+      Velocity(el, { fontSize: "1em" }, { complete: done });
+    }
+    function leave(el, done) {
+      Velocity(el, { translateX: "15px", rotateZ: "50deg" }, { duration: 600 });
+      Velocity(el, { rotateZ: "100deg" }, { loop: 2 });
+      Velocity(
+        el,
+        {
+          rotateZ: "45deg",
+          translateY: "30px",
+          translateX: "30px",
+          opacity: 0
+        },
+        { complete: done }
+      );
+    }
+    return { show, showObject, beforeEnter, enter, leave };
   }
 };
 </script>
@@ -80,7 +126,11 @@ export default {
   flex-direction: column;
   align-items: center;
   .item {
-    height: 200px;
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   /* 单元素切换 */
   .fade-enter-active,
