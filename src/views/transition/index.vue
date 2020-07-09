@@ -36,6 +36,17 @@
     <div class="item">
       <lc-button
         color="linear-gradient(to right, #4bb0ff, #6149f6)"
+        @click="showObject.showSixth = !showObject.showSixth"
+      >
+        同时设置过渡和动画
+      </lc-button>
+      <transition type="transition" name="both">
+        <p id="both" v-show="showObject.showSixth">弘成教育</p>
+      </transition>
+    </div>
+    <div class="item">
+      <lc-button
+        color="linear-gradient(to right, #4bb0ff, #6149f6)"
         @click="showObject.showFourth = !showObject.showFourth"
       >
         自定义类名
@@ -70,9 +81,9 @@
 </template>
 
 <script>
-import { ref, reactive } from "@vue/composition-api";
+import { ref, reactive, onMounted } from "@vue/composition-api";
 import Velocity from "velocity-animate";
-import { Button } from "vant";
+import { Button, Toast } from "vant";
 
 export default {
   components: {
@@ -85,7 +96,20 @@ export default {
       showSec: false,
       showThird: false,
       showFourth: false,
-      showFifth: false
+      showFifth: false,
+      showSixth: false
+    });
+    onMounted(() => {
+      const el = document.getElementById("both");
+      console.log(el);
+      //事件名称（String）、要触发的事件处理函数(Function)、指定事件处理函数的时期或阶段(boolean)。
+      el.addEventListener(
+        "transitionend",
+        () => {
+          Toast("过渡完事儿了");
+        },
+        false
+      );
     });
     function beforeEnter(el) {
       el.style.opacity = 0;
@@ -96,12 +120,12 @@ export default {
       // 第二个参数：表示要执行动画的样式属性
       // 第三个参数：表示动画执行的时间长度
       // 第四个参数：表示动画执行完成的回调函数
-      Velocity(el, { opacity: 1, fontSize: "1.4em" }, { duration: 300 });
+      Velocity(el, { opacity: 1, fontSize: "1.5em" }, { duration: 300 });
       Velocity(el, { fontSize: "1em" }, { complete: done });
     }
     function leave(el, done) {
       Velocity(el, { translateX: "15px", rotateZ: "50deg" }, { duration: 600 });
-      Velocity(el, { rotateZ: "100deg" }, { loop: 2 });
+      Velocity(el, { rotateZ: "100deg" }, { loop: 3 });
       Velocity(
         el,
         {
@@ -113,7 +137,7 @@ export default {
         { complete: done }
       );
     }
-    return { show, showObject, beforeEnter, enter, leave };
+    return { show, showObject, onMounted, beforeEnter, enter, leave };
   }
 };
 </script>
@@ -122,6 +146,7 @@ export default {
 .container {
   height: 100vh;
   padding: 20px;
+  font-size: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,6 +160,13 @@ export default {
   /* 单元素切换 */
   .fade-enter-active,
   .fade-leave-active {
+    /*
+     transition 属性是一个简写属性，用于设置四个过渡属性：
+     transition-property 规定设置过渡效果的 CSS 属性的名称。
+     transition-duration 规定完成过渡效果需要多少秒或毫秒。
+     transition-timing-function 规定速度效果的速度曲线。
+     transition-delay 	定义过渡效果何时开始。
+    */
     transition: opacity 0.5s;
   }
   .fade-enter,
@@ -170,6 +202,19 @@ export default {
     100% {
       transform: scale(1);
     }
+  }
+  /* 同时设置过渡和动画 */
+  .both-enter-active {
+    animation: bounce-in 0.5s;
+    transition: opacity 3s;
+  }
+  .both-leave-active {
+    animation: bounce-in 0.5s reverse;
+    transition: opacity 1.5s;
+  }
+  .both-enter,
+  .both-leave-to {
+    opacity: 0;
   }
 }
 </style>
