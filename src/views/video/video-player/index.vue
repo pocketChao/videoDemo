@@ -87,7 +87,8 @@ export default {
       // 微信 X5 同层播放（video上面可以放置html元素）
       "x5-video-player-type": "h5",
       // 微信 X5 全屏播放
-      "x5-video-player-fullscreen": true
+      "x5-video-player-fullscreen": true,
+      loop: true
     });
 
     watch(

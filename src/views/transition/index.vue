@@ -77,6 +77,21 @@
         </p>
       </transition>
     </div>
+    <div class="item">
+      <lc-button
+        color="linear-gradient(to right, #4bb0ff, #6149f6)"
+        @click="showObject.isEditing = !showObject.isEditing"
+        >多元素过渡</lc-button
+      >
+      <transition name="multi-element">
+        <div v-if="showObject.isEditing" key="save">
+          Save
+        </div>
+        <div v-else key="edit">
+          Edit
+        </div>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -97,7 +112,8 @@ export default {
       showThird: false,
       showFourth: false,
       showFifth: false,
-      showSixth: false
+      showSixth: false,
+      isEditing: false
     });
     onMounted(() => {
       const el = document.getElementById("both");
@@ -215,6 +231,13 @@ export default {
   .both-enter,
   .both-leave-to {
     opacity: 0;
+  }
+  /* 多元素过渡 */
+  .multi-element-enter-active {
+    transition: all 0.3s ease;
+  }
+  .multi-element-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
   }
 }
 </style>
