@@ -7,6 +7,7 @@
     <custom-class class="item"></custom-class>
     <js-transition class="item"></js-transition>
     <multi-element class="item"></multi-element>
+    <multi-components class="item"></multi-components>
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import Both from "./components/both.vue";
 import CustomClass from "./components/custom-class.vue";
 import JsTransition from "./components/js-transition.vue";
 import MultiElement from "./components/multi-element.vue";
+import MultiComponents from "./components/multi-components.vue";
 
 export default {
   components: {
@@ -27,7 +29,8 @@ export default {
     Both,
     CustomClass,
     JsTransition,
-    MultiElement
+    MultiElement,
+    MultiComponents
   },
   setup() {
     return {};
