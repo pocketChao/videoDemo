@@ -32,6 +32,13 @@ export default defineComponent({
         },
         false
       );
+      el.addEventListener(
+        "animationend",
+        () => {
+          Toast("动画结束了");
+        },
+        false
+      );
     });
     return { show };
   }
