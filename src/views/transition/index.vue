@@ -8,6 +8,8 @@
     <js-transition class="item"></js-transition>
     <multi-element class="item"></multi-element>
     <multi-components class="item"></multi-components>
+    <list class="item"></list>
+    <dynamic-transition class="item"></dynamic-transition>
   </div>
 </template>
 
@@ -20,6 +22,8 @@ import CustomClass from "./components/custom-class.vue";
 import JsTransition from "./components/js-transition.vue";
 import MultiElement from "./components/multi-element.vue";
 import MultiComponents from "./components/multi-components.vue";
+import List from "./components/list.vue";
+import DynamicTransition from "./components/dynamic-transition.vue";
 
 export default {
   components: {
@@ -30,7 +34,9 @@ export default {
     CustomClass,
     JsTransition,
     MultiElement,
-    MultiComponents
+    MultiComponents,
+    List,
+    DynamicTransition
   },
   setup() {
     return {};
