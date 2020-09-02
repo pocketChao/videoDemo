@@ -3,6 +3,7 @@
     style="margin-top: 20px"
     width="80"
     height="80"
+    fit="cover"
     src="https://img.yzcdn.cn/vant/cat.jpeg"
   ></l-c-image>
 </template>
