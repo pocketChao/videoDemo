@@ -7,7 +7,8 @@
       单元素切换
     </lc-button>
     <transition name="fade">
-      <p v-if="show">弘成教育</p>
+      <img v-if="show" src="../../../assets/images/d.jpg" />
+      <!--      <p v-if="show">弘成教育</p>-->
     </transition>
   </div>
 </template>

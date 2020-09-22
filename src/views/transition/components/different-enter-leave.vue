@@ -7,7 +7,7 @@
       不同的进入和离开效果
     </lc-button>
     <transition name="slide-fade">
-      <p v-if="show">弘成教育</p>
+      <img v-if="show" src="../../../assets/images/d.jpg">
     </transition>
   </div>
 </template>
