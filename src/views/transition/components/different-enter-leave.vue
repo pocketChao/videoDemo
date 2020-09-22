@@ -7,7 +7,7 @@
       不同的进入和离开效果
     </lc-button>
     <transition name="slide-fade">
-      <img v-if="show" src="../../../assets/images/d.jpg">
+      <img v-if="show" src="../../../assets/images/d.jpg" />
     </transition>
   </div>
 </template>
