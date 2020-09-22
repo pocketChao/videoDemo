@@ -84,6 +84,7 @@ export default {
       // 控制条配置 *只对原生video有效，对自定义UI请使用ignores选项
       // controlsList: [],
       ignores: ["replay"],
+      playbackRate: [0.5, 0.75, 1, 1.5, 2],
       // 微信 X5 同层播放（video上面可以放置html元素）
       "x5-video-player-type": "h5",
       // 微信 X5 全屏播放
@@ -122,6 +123,18 @@ export default {
           console.log("不支持该视频格式");
           break;
       }
+      player.emit("resourceReady", [
+        {
+          name: "高清",
+          url:
+            "http://saas.g3.chinaedu.net:13691/sfs/lms3/uploadfile//30003//20200422/2a990dfd-297f-493d-b1a2-634e4b10cca3.mp4"
+        },
+        {
+          name: "超清",
+          url:
+            "http://s2.pstatp.com/cdn/expire-1-M/byted-player-videos/1.0.0/xgplayer-demo.mp4"
+        }
+      ]);
       player.on("ready", () => {
         console.log("ready");
         emit("ready");

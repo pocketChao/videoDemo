@@ -7,9 +7,7 @@
       CSS动画
     </lc-button>
     <transition name="bounce">
-      <p v-if="show">
-        弘成教育弘成教育弘成教育弘成教育弘成教育弘成教育弘成教育弘成教育弘成教育弘成教育弘成教育弘成教育弘成教育弘成教育
-      </p>
+      <img v-if="show" src="../../../assets/images/d.jpg" />
     </transition>
   </div>
 </template>
