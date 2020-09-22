@@ -49,11 +49,11 @@ export default defineComponent({
 /* 同时设置过渡和动画 */
 .both-enter-active {
   animation: bounce-in 0.5s;
-  transition: opacity 2s;
+  transition: opacity 3s;
 }
 .both-leave-active {
   animation: bounce-in 0.5s reverse;
-  transition: opacity 1.5s;
+  transition: opacity 2.5s;
 }
 .both-enter,
 .both-leave-to {
