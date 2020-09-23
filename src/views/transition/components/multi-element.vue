@@ -6,7 +6,7 @@
       >多元素过渡</lc-button
     >
 
-    <transition name="multi-element">
+    <transition name="multi-element" mode="out-in">
       <div v-if="show" key="save">
         Save
       </div>

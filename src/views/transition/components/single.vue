@@ -38,7 +38,7 @@ export default defineComponent({
      transition-timing-function 规定速度效果的速度曲线。
      transition-delay 	定义过渡效果何时开始。
     */
-  transition: opacity 0.5s;
+  transition: opacity 0.5s ease-in;
 }
 .fade-enter,
 .fade-leave-to {

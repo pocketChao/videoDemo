@@ -41,6 +41,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .flip-list-move {
-  transition: transform 1s;
+  transition: transform 3s;
 }
 </style>
