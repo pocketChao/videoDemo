@@ -7,7 +7,7 @@
       CSS动画
     </lc-button>
     <transition name="bounce">
-      <img v-if="show" src="../../../assets/images/d.jpg" />
+      <img v-if="show" src="../../../assets/images/a.png" />
     </transition>
   </div>
 </template>
