@@ -8,7 +8,6 @@
     </lc-button>
     <transition name="fade">
       <img v-if="show" src="../../../assets/images/d.jpg" />
-      <!--      <p v-if="show">弘成教育</p>-->
     </transition>
   </div>
 </template>
