@@ -14,7 +14,7 @@
 
 <script>
 import { defineComponent, ref, onMounted } from "@vue/composition-api";
-import { Button, Toast } from "vant";
+import { Button } from "vant";
 export default defineComponent({
   name: "both",
   components: {
@@ -24,18 +24,18 @@ export default defineComponent({
     const show = ref(false);
     onMounted(() => {
       const el = document.getElementById("both");
-      //事件名称（String）、要触发的事件处理函数(Function)、指定事件处理函数的时期或阶段(boolean)。
+      // 参数 事件名称（String）、要触发的事件处理函数(Function)、useCapture布尔值，规定是否是捕获型，默认为 false（冒泡）。因为是可选的，往往也会省略它。决定嵌套元素事件触发顺序(boolean)。
       el.addEventListener(
         "transitionend",
         () => {
-          Toast("过渡完事儿了");
+          console.log("过渡结束");
         },
         false
       );
       el.addEventListener(
         "animationend",
         () => {
-          Toast("动画结束了");
+          console.log("动画结束");
         },
         false
       );
@@ -49,11 +49,11 @@ export default defineComponent({
 /* 同时设置过渡和动画 */
 .both-enter-active {
   animation: bounce-in 0.5s;
-  transition: opacity 3s;
+  transition: opacity 2s;
 }
 .both-leave-active {
-  animation: bounce-in 0.5s reverse;
-  transition: opacity 2.5s;
+  animation: bounce-in 0.6s reverse;
+  transition: opacity 0.5s;
 }
 .both-enter,
 .both-leave-to {
