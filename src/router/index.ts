@@ -7,7 +7,7 @@ const routes: Array<RouteConfig> = [
   {
     path: "/",
     name: "Transition",
-    component: () => import("@/views/transition/index.vue")
+    component: () => import("@/views/video/index.vue")
   },
   {
     path: "/video",
