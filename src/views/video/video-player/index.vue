@@ -86,7 +86,7 @@ export default {
       ignores: ["replay"],
       playbackRate: [0.5, 0.75, 1, 1.5, 2],
       // 微信 X5 同层播放（video上面可以放置html元素）
-      "x5-video-player-type": "h5",
+      "x5-video-player-type": "h5-page",
       // 微信 X5 全屏播放
       "x5-video-player-fullscreen": false,
       loop: true
