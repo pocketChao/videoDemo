@@ -3040,10 +3040,10 @@ d@1, d@^1.0.1:
     es5-ext "^0.10.50"
     type "^1.0.1"
 
-danmu.js@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/danmu.js/-/danmu.js-0.1.0.tgz#928fb297dc6598850cd06610dd6454a497748f6b"
-  integrity sha512-RRmDSbcrO8kvRJw0GsqdUk1fMhtzschsbSqZj1xop/kKeizNFuJ8BZTOZNNOH2g2sF3K6z2klJFT9ZT9F2EI2w==
+danmu.js@^0.2.17:
+  version "0.2.23"
+  resolved "https://registry.yarnpkg.com/danmu.js/-/danmu.js-0.2.23.tgz#339b512152ed5a8253829be007c5be5bd3821856"
+  integrity sha512-I6M2RNPGRJdDfFjBzXBo0moi0mnFpjfDw1SoCHj0DelMdlj1AC0Al+7xYqaC4EsFkKMWTrGJ7mGChqGlGhhvig==
   dependencies:
     event-emitter "^0.3.5"
 
@@ -9878,14 +9878,14 @@ xgplayer-utils@^2.3.9:
   dependencies:
     xgplayer-transmuxer-constant-events "^2.3.9"
 
-xgplayer@^2.9.3:
-  version "2.9.3"
-  resolved "https://registry.yarnpkg.com/xgplayer/-/xgplayer-2.9.3.tgz#a15156cb5c4a9bc6261dbf6ae59fb61a13b506a7"
-  integrity sha512-UvoS/XZEQBwnim1KGehqAz7i6yX9mS6kcNsRp4XGLh+hFJJCD1EF0vF3nni5Bu79jlQohuzyOU3xH3Tv47VfFA==
+xgplayer@2.9.4:
+  version "2.9.4"
+  resolved "https://registry.yarnpkg.com/xgplayer/-/xgplayer-2.9.4.tgz#500b839e26edbb064d6e2f28ea38c6fbf45baca7"
+  integrity sha512-pRs0h7k/k6iLgC0vw+enU6MiDGfU+E+FT6m2nJdWOmnuGT/hTY7C0jKHdm4GIBjN3EbkDopxUWq5tdfyHp15LQ==
   dependencies:
     chalk "^2.3.2"
     commander "^2.15.1"
-    danmu.js "^0.1.0"
+    danmu.js "^0.2.17"
     deepmerge "^1.5.0"
     downloadjs "1.4.7"
     draggabilly "^2.2.0"
