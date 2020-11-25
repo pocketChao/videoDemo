@@ -3040,7 +3040,7 @@ d@1, d@^1.0.1:
     es5-ext "^0.10.50"
     type "^1.0.1"
 
-danmu.js@^0.2.17:
+danmu.js@0.2.23:
   version "0.2.23"
   resolved "https://registry.yarnpkg.com/danmu.js/-/danmu.js-0.2.23.tgz#339b512152ed5a8253829be007c5be5bd3821856"
   integrity sha512-I6M2RNPGRJdDfFjBzXBo0moi0mnFpjfDw1SoCHj0DelMdlj1AC0Al+7xYqaC4EsFkKMWTrGJ7mGChqGlGhhvig==
@@ -4530,9 +4530,9 @@ hex-color-regex@^1.1.0:
   integrity sha1-TAb8y0YC/iYCs8k9+C1+fb8aio4=
 
 highlight.js@^9.6.0:
-  version "9.18.1"
-  resolved "https://registry.npm.taobao.org/highlight.js/download/highlight.js-9.18.1.tgz#ed21aa001fe6252bb10a3d76d47573c6539fe13c"
-  integrity sha1-7SGqAB/mJSuxCj121HVzxlOf4Tw=
+  version "9.18.5"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.18.5.tgz#d18a359867f378c138d6819edfc2a8acd5f29825"
+  integrity sha512-a5bFyofd/BHCX52/8i8uJkjr9DYwXIPnM/plwI6W7ezItLGqzt7X2G2nXuYSfsIJdkwwj/g9DG1LkcGJI/dDoA==
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -9878,14 +9878,14 @@ xgplayer-utils@^2.3.9:
   dependencies:
     xgplayer-transmuxer-constant-events "^2.3.9"
 
-xgplayer@2.9.4:
-  version "2.9.4"
-  resolved "https://registry.yarnpkg.com/xgplayer/-/xgplayer-2.9.4.tgz#500b839e26edbb064d6e2f28ea38c6fbf45baca7"
-  integrity sha512-pRs0h7k/k6iLgC0vw+enU6MiDGfU+E+FT6m2nJdWOmnuGT/hTY7C0jKHdm4GIBjN3EbkDopxUWq5tdfyHp15LQ==
+xgplayer@^2.9.3:
+  version "2.13.1"
+  resolved "https://registry.yarnpkg.com/xgplayer/-/xgplayer-2.13.1.tgz#a463ca0f80c635dc9d3d9b1adc58b8efab7bcba2"
+  integrity sha512-dwmlCgFQBzmm8ru11RMzAvhXOvmXJURzJ7zVIxuadUa+ofTb1brzEdqwbKEw7Hf35XnwsO3R/Ve+Di96tKlmRw==
   dependencies:
     chalk "^2.3.2"
     commander "^2.15.1"
-    danmu.js "^0.2.17"
+    danmu.js "0.2.23"
     deepmerge "^1.5.0"
     downloadjs "1.4.7"
     draggabilly "^2.2.0"
