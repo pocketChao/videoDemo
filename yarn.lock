@@ -3040,10 +3040,10 @@ d@1, d@^1.0.1:
     es5-ext "^0.10.50"
     type "^1.0.1"
 
-danmu.js@^0.2.17:
-  version "0.2.23"
-  resolved "https://registry.yarnpkg.com/danmu.js/-/danmu.js-0.2.23.tgz#339b512152ed5a8253829be007c5be5bd3821856"
-  integrity sha512-I6M2RNPGRJdDfFjBzXBo0moi0mnFpjfDw1SoCHj0DelMdlj1AC0Al+7xYqaC4EsFkKMWTrGJ7mGChqGlGhhvig==
+danmu.js@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/danmu.js/-/danmu.js-0.3.3.tgz#fabf6c51be69e84afdac75bcd1058904f0e24e61"
+  integrity sha512-qJyqBHMAw6u2S9hTISADMyarl6dzX+4uwQF2zNs1Rm91JFnr6alhFBQS9jEBJ0ysK5huVaJCxcIekppAxe3zDQ==
   dependencies:
     event-emitter "^0.3.5"
 
@@ -3112,7 +3112,7 @@ deepmerge@2.0.1:
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-2.0.1.tgz#25c1c24f110fb914f80001b925264dd77f3f4312"
   integrity sha512-VIPwiMJqJ13ZQfaCsIFnp5Me9tnjURiaIFxfz7EH0Ci0dTSQpZtSLrqOicXqEd/z2r+z+Klk9GzmnRsgpgbOsQ==
 
-deepmerge@^1.5.0, deepmerge@^1.5.2:
+deepmerge@^1.5.2:
   version "1.5.2"
   resolved "https://registry.npm.taobao.org/deepmerge/download/deepmerge-1.5.2.tgz?cache=0&sync_timestamp=1572279556265&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdeepmerge%2Fdownload%2Fdeepmerge-1.5.2.tgz#10499d868844cdad4fee0842df8c7f6f0c95a753"
   integrity sha1-EEmdhohEza1P7ghC34x/bwyVp1M=
@@ -3241,9 +3241,9 @@ dns-equal@^1.0.0:
   integrity sha1-s55/HabrCnW6nBcySzR1PEfgZU0=
 
 dns-packet@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.npm.taobao.org/dns-packet/download/dns-packet-1.3.1.tgz#12aa426981075be500b910eedcd0b47dd7deda5a"
-  integrity sha1-EqpCaYEHW+UAuRDu3NC0fdfe2lo=
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/dns-packet/-/dns-packet-1.3.4.tgz#e3455065824a2507ba886c55a89963bb107dec6f"
+  integrity sha512-BQ6F4vycLXBvdrJZ6S3gZewt6rcrks9KBgM9vrhW+knGRqc8uEdT7fuCwloc7nny5xNoMJ17HGH0R/6fpo8ECA==
   dependencies:
     ip "^1.1.0"
     safe-buffer "^5.0.1"
@@ -4851,11 +4851,6 @@ inquirer@^7.0.0, inquirer@^7.1.0:
     string-width "^4.1.0"
     strip-ansi "^6.0.0"
     through "^2.3.6"
-
-install@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/install/-/install-0.13.0.tgz#6af6e9da9dd0987de2ab420f78e60d9c17260776"
-  integrity sha512-zDml/jzr2PKU9I8J/xyZBQn8rPCAY//UOYNmR01XwNwyfhEWObo2SWfSl1+0tm1u6PhxLwDnfsT/6jB7OUxqFA==
 
 internal-ip@^4.3.0:
   version "4.3.0"
@@ -6534,11 +6529,6 @@ pascalcase@^0.1.1:
   resolved "https://registry.npm.taobao.org/pascalcase/download/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
   integrity sha1-s2PlXoAGym/iF4TS2yK9FdeRfxQ=
 
-pasition@^1.0.1:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/pasition/-/pasition-1.0.3.tgz#133d6ed4ae7ebd819d29651491d53f74151273bd"
-  integrity sha512-hsUNLhS7e5uWGkTtgbxoHMzCUb0PeboQelyqPmpRkAk26AkKal0Z6JfYWhjIEhZHIYzJTfr6Aom/BpBPrZXHnA==
-
 path-browserify@0.0.1:
   version "0.0.1"
   resolved "https://registry.npm.taobao.org/path-browserify/download/path-browserify-0.0.1.tgz#e6c4ddd7ed3aa27c68a20cc4e50e1a4ee83bbc4a"
@@ -7841,11 +7831,6 @@ repeating@^2.0.0:
   integrity sha1-UhTFOpJtNVJwdSf7q0FdvAjQbdo=
   dependencies:
     is-finite "^1.0.0"
-
-request-frame@^1.5.3:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/request-frame/-/request-frame-1.5.3.tgz#813c3160d9b023583889aaa977389b68fcaa2e3d"
-  integrity sha1-gTwxYNmwI1g4iaqpdzibaPyqLj0=
 
 request-promise-core@1.1.3:
   version "1.1.3"
@@ -9746,6 +9731,13 @@ xgplayer-mobilevideo@^2.3.9:
     xgplayer-transmuxer-buffer-stream "^2.3.9"
     xgplayer-transmuxer-codec-avc "^2.3.9"
 
+xgplayer-subtitles@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/xgplayer-subtitles/-/xgplayer-subtitles-1.0.9.tgz#4227fb1c868b1c73dd060b17ce120ce31c726f22"
+  integrity sha512-9or3CvDzKVudhzyljveV2/kV1Y13W+T57c+ilquA+Ysym+cY4A1v9Z8umq2KM4JNQPFGKWRvgfGjl5YpICnI3w==
+  dependencies:
+    event-emitter "^0.3.5"
+
 xgplayer-transmuxer-buffer-presource@^2.3.9:
   version "2.3.9"
   resolved "https://registry.yarnpkg.com/xgplayer-transmuxer-buffer-presource/-/xgplayer-transmuxer-buffer-presource-2.3.9.tgz#7e0579e2be8d3db1036dec6736adbcdea38c3aab"
@@ -9878,22 +9870,19 @@ xgplayer-utils@^2.3.9:
   dependencies:
     xgplayer-transmuxer-constant-events "^2.3.9"
 
-xgplayer@2.9.4:
-  version "2.9.4"
-  resolved "https://registry.yarnpkg.com/xgplayer/-/xgplayer-2.9.4.tgz#500b839e26edbb064d6e2f28ea38c6fbf45baca7"
-  integrity sha512-pRs0h7k/k6iLgC0vw+enU6MiDGfU+E+FT6m2nJdWOmnuGT/hTY7C0jKHdm4GIBjN3EbkDopxUWq5tdfyHp15LQ==
+xgplayer@^2.9.3:
+  version "2.20.12"
+  resolved "https://registry.yarnpkg.com/xgplayer/-/xgplayer-2.20.12.tgz#09381b5f8c8fea0ae7015011cdcca15d38807e56"
+  integrity sha512-8OL7oOjApyYSQ1OCnW/jz2kbVlknJyv+Vz7bVxDA/KPv4yVgOvm+M68XT3swGm6OLgAOipHhNW9sqImeuP4swQ==
   dependencies:
     chalk "^2.3.2"
     commander "^2.15.1"
-    danmu.js "^0.2.17"
-    deepmerge "^1.5.0"
+    danmu.js "^0.3.3"
     downloadjs "1.4.7"
     draggabilly "^2.2.0"
     event-emitter "^0.3.5"
     fs-extra "^5.0.0"
-    install "^0.13.0"
-    pasition "^1.0.1"
-    request-frame "^1.5.3"
+    xgplayer-subtitles "^1.0.9"
 
 xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.2"
