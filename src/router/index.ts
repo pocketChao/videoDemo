@@ -6,13 +6,13 @@ Vue.use(VueRouter);
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "Transition",
+    name: "VideoPlayPage",
     component: () => import("@/views/video/index.vue")
   },
   {
-    path: "/video",
-    name: "VideoPlayPage",
-    component: () => import("@/views/video/index.vue")
+    path: "/draw-panel",
+    name: "DrawPanel",
+    component: () => import("@/views/draw-panel/index.vue")
   }
 ];
 
