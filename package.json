@@ -2,6 +2,8 @@
   "name": "new-project",
   "version": "1.22.4",
   "private": true,
+  "dev": "cross-env  webpack-dev-server --open --config ./webpack.config.dev.js --color",
+  "build": "cross-env BABEL_ENV=production webpack --color --config ./webpack.config.prod.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -22,15 +24,18 @@
     "postcss-px-to-viewport": "^1.1.1",
     "postcss-url": "^8.0.0",
     "vant": "^2.8.6",
+    "vconsole": "^3.3.4",
     "velocity-animate": "^1.5.2",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.5.0",
     "vue-router": "^3.3.4",
     "vuex": "^3.4.0",
-    "xgplayer": "^2.9.3",
+    "webpack-bundle-analyzer": "^3.9.0",
+    "xgplayer": "2.11.7",
     "xgplayer-flv": "^2.3.9",
-    "xgplayer-hls.js": "^2.2.3"
+    "xgplayer-hls.js": "^2.2.3",
+    "xgplayer-music": "^2.2.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.26.0",
@@ -67,7 +72,9 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {}
+    "rules": {
+      "@typescript-eslint/no-var-requires": 0
+    }
   },
   "postcss": {
     "plugins": {
